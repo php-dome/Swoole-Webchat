@@ -1,3 +1,7 @@
+<?php
+    phpinfo();
+
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -42,8 +46,7 @@ $(document).ready(function(){
     websocket.onopen = function (evt) {
         console.log("Connected to WebSocket server.");
         $("#model").modal('show');
-    };    
-    
+    };
 
     websocket.onmessage = function (evt) {
         console.log('Retrieved data from server: ' + evt.data);
@@ -54,7 +57,6 @@ $(document).ready(function(){
         $("#in").focus();        
         
     };
-    
     
     $("#basic-addon2").click(function(){
         var msg = $("#in").val();
